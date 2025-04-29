@@ -457,7 +457,7 @@ const FinanceTracker: React.FC = () => {
   
   // New Networth Entry Form
   const renderNewNetworthForm = () => (
-    <div className="new-networth-form mt-4 p-4 border border-gray-300 rounded-md">
+    <div className="new-networth-form mt-4 p-4 border border-gray-300 rounded-md bg-white shadow-md">
       <h3 className="text-lg font-bold mb-2">Add Historical Net Worth</h3>
       <div className="mb-2">
         <label className="block text-sm font-medium text-gray-700">Date</label>
@@ -714,10 +714,6 @@ const FinanceTracker: React.FC = () => {
             </div>
             
             {showNewAccountForm && renderNewAccountForm()}
-            
-            <div className="text-gray-700 italic mt-4">
-              This space can be used for other accounts. Users can change names add labels, change groups etc.
-            </div>
           </div>
         );
       
@@ -928,12 +924,12 @@ const FinanceTracker: React.FC = () => {
                 <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center text-sm">
                   {Math.min(emergencyFundPercentage, 100).toFixed(0)}%
                 </div>
-              </div>
-              <div className="absolute top-0 right-0 -mt-4">
-                {emergencyFundCurrent.toLocaleString()} / {emergencyFundGoal.toLocaleString()}
-              </div>
-              <div className="absolute top-0 right-12 w-6 h-6 rounded-full bg-white border border-gray-300 flex items-center justify-center">
-                <span className="text-xs">👤</span>
+                <div className="absolute top-0 right-0 -mt-4">
+                  {emergencyFundCurrent.toLocaleString()} / {emergencyFundGoal.toLocaleString()}
+                </div>
+                <div className="absolute top-0 right-12 w-6 h-6 rounded-full bg-white border border-gray-300 flex items-center justify-center">
+                  <span className="text-xs">👤</span>
+                </div>
               </div>
             </div>
           </div>
